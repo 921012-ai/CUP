@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>中央警察大學登入</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 24px;
+      color: #000000;
+    }
+
+    h2 {
+      font-size: 20px;
+      color: #000000;
+    }
+
+    .description {
+      font-size: 16px;
+      color: #996633;
+      margin-bottom: 15px;
+    }
+
+    input, button {
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      width: 100%;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto 10px auto;
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width: 820px) {
+      .container {
+        width: 90vw;
+        max-width: 600px;
+      }
+
+      input,
+      button {
+        font-size: 1.2em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="step1">
+      <img src="logo.png" alt="中央警察大學圖示">
+      <h1>中央警察大學 - 單一入口網</h1>
+      <h2>Step 1: 認證</h2>
+      <p class="description">校外需先進行認證，才能繼續系統登入</p>
+
+      <input type="text" id="user1" placeholder="請輸入帳號">
+      <input type="password" id="pass1" placeholder="請輸入密碼">
+      <input type="text" id="captcha1" placeholder="輸入驗證碼">
+      <p><img src="captcha.png" alt="驗證碼圖示"></p>
+      <button onclick="checkStep1()">登入</button>
+    </div>
+
+    <div id="step2" style="display:none;">
+      <img src="step2.png" alt="Step 2">
+      <h2>Step 2: 系統登入</h2>
+      <input type="text" id="user2" placeholder="請再次輸入帳號">
+      <input type="password" id="pass2" placeholder="請再次輸入密碼">
+      <input type="text" id="captcha2" placeholder="輸入驗證碼">
+      <p><img src="captcha.png" alt="驗證碼圖示"></p>
+      <button onclick="checkStep2()">登入</button>
+    </div>
+  </div>
+
+  <script>
+    function checkStep1() {
+      var u1 = document.getElementById('user1').value.trim();
+      var p1 = document.getElementById('pass1').value.trim();
+      var c1 = document.getElementById('captcha1').value.trim().toLowerCase();
+
+      if (u1 && p1 && c1 === '3apf') {
+        document.getElementById('step1').style.display = 'none
