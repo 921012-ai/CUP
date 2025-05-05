@@ -26,19 +26,19 @@
 
     h1 {
       font-size: 24px;
-      color: #000000; /* 黑色 */
+      color: #000000;
       margin: 0 0 10px 0;
     }
 
     h2 {
       font-size: 20px;
-      color: #000000; /* 黑色 */
+      color: #000000;
       margin: 0 0 8px 0;
     }
 
     .description {
       font-size: 16px;
-      color: #996633; /* 土黃色 */
+      color: #996633;
       margin-bottom: 15px;
     }
 
@@ -89,7 +89,7 @@
 <body>
   <div class="container">
     <div id="step1">
-      <img src="螢幕擷取畫面 2025-05-02 234906.png" alt="中央警察大學圖示">
+      <img src="step1.png" alt="中央警察大學圖示">
       <h1>中央警察大學 - 單一入口網</h1>
       <h2>Step 1: 認證</h2>
       <p class="description">校外需先進行認證，才能繼續系統登入</p>
@@ -97,17 +97,17 @@
       <input type="text" id="user1" placeholder="請輸入帳號">
       <input type="password" id="pass1" placeholder="請輸入密碼">
       <input type="text" id="captcha1" placeholder="輸入驗證碼">
-      <p><img src="螢幕擷取畫面 2025-05-02 231847.png" alt="驗證碼圖示"></p>
+      <p><img src="captcha.png" alt="驗證碼圖示"></p>
       <button onclick="checkStep1()">登入</button>
     </div>
 
     <div id="step2" style="display:none;">
-      <img src="螢幕擷取畫面 2025-05-02 232236.png" alt="Step 2">
+      <img src="step2.png" alt="Step 2">
       <h2>Step 2: 系統登入</h2>
       <input type="text" id="user2" placeholder="請再次輸入帳號">
       <input type="password" id="pass2" placeholder="請再次輸入密碼">
       <input type="text" id="captcha2" placeholder="輸入驗證碼">
-      <p><img src="螢幕擷取畫面 2025-05-02 231847.png" alt="驗證碼圖示"></p>
+      <p><img src="captcha.png" alt="驗證碼圖示"></p>
       <button onclick="checkStep2()">登入</button>
     </div>
   </div>
